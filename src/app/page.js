@@ -1,30 +1,59 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import axios from 'axios';
 
-import { sql } from "@vercel/postgres";
+
+
 import { Contrail_One } from "next/font/google";
 
-async function Cart() {
-  const { rows } = await sql`SELECT * from WORKERS`;
+import { sql } from "@vercel/postgres";
+
+
+export default async function Page() {
+  const { rows } = await sql`SELECT * from PRODUCTS`;
 
   return (
     <div>
+
+      
+
+
+      <div class="title" style={{ width: '500px', margin: 'auto' , fontSize: '50px' }}>
+        <h1>The Company Dell</h1>
+      </div>
+
+
+      <div class="description" style={{width: '500px', margin: 'auto'}}> 
+        <h3>Innovation that stops at nothing.</h3>
+      </div>
+    
+      <div class="products" style={{margin: 'auto'}}>
+        Here is a list of products 
+        
+      </div>
+
+
+      
       {rows.map((row) => (
-        <div key={row.id}>
-          {row.id} - {row.quantity}
+        <div key={row.device}>
+          {row.device} - {row.department}
+          {row.price}
         </div>
       ))}
+
+
+
     </div>
+
+   
   );
 }
 
-export default function Home() {
+const MyComponent = () => {
   return (
-    <div class="center-container">
-      <h1 style={{ width: '100px', margin: 'auto' }}>Dell</h1>
-      <h2 style={{ paddingLeft: '750px', margin: 'auto' }}>Names of People</h2>
-      <h3 style={{ paddingLeft: '600px', margin: 'auto' }}>by Beren Akpinar, Narelle Robles, and Pedro Patlan</h3>
-      <Cart />
+    <div>
+      <MyLogo/>
     </div>
   );
-}
+};
+
