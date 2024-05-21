@@ -26,5 +26,13 @@ a {
 }
 
 body {
-  background-color: rgb(182, 180, 246);
+  background-color: white;
+}
+
+p {
+  font-size: 20px
+}
+
+h1{
+  text-shadow: 25px 25px 5px rgb(246, 217, 246);
 }
