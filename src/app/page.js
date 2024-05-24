@@ -6,10 +6,15 @@ import { Bree_Serif, Contrail_One } from "next/font/google";
 import { sql } from "@vercel/postgres";
 import React from 'react';
 import logo from './assets/freelancer.svg';
+import { SearchBar } from "./components/SearchBar"
 
 const MyImageComponent = () => {
   return <Image src={logo} alt="Freelancer Logo"  />;
 };
+
+
+
+
 
 
 export default async function Page() {
@@ -20,6 +25,11 @@ export default async function Page() {
 
   return (
     <div>
+
+      <div className="search-bar-container">
+        <SearchBar/>  
+      </div>
+
 
       <div className="container" style={{ display: 'flex', alignItems: 'center', width: '1200px', margin: 'auto' }}>
         <div className="title" style={{ flex: 1, fontSize: '50px' }}>
@@ -91,6 +101,8 @@ export default async function Page() {
 
 
     </div>
+
+
    
   );
 

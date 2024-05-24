@@ -234,3 +234,11 @@
   margin: auto;
   padding: 10px;
 }
+
+.search-bar-container {
+  padding: 5vh;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  min-width: 200px;
+}
