@@ -32,9 +32,9 @@ export default async function Page() {
 
 
       <div className="container" style={{ display: 'flex', alignItems: 'center', width: '1200px', margin: 'auto' }}>
-        <div className="title" style={{ flex: 1, fontSize: '50px' }}>
+        <div className="title" style={{ flex: 1, fontSize: '50px', color: "black" }}>
           <h1>The Company Dell</h1>
-          <p>Developers: Beren Akpinar, Narelle Robles, and Pedro Patlan</p>
+          <p style={{color: "black"}}>Developers: Beren Akpinar, Narelle Robles, and Pedro Patlan</p>
         </div>
         <div className="image" style={{ flex: 1 }}>
           <MyImageComponent />
@@ -42,15 +42,15 @@ export default async function Page() {
       </div>
       
 
-      <div class="description" style={{textAlign: "center", width: '500px', margin: 'auto'}}> 
+      <div class="description" style={{textAlign: "center", width: '500px', margin: 'auto', color: "black"}}> 
         <h2>Innovation that stops at nothing.</h2>
       </div>
     
-      <hr style={{ width: '50%', margin: 'auto', borderColor: 'rgb(246, 217, 246)', borderWidth: '5px', borderRadius: "50px"}} />
+      <hr style={{ width: '50%', margin: 'auto', borderColor: 'rgb(246, 217, 246)', borderWidth: '5px', borderRadius: "50px", color: "black"}} />
 
       <br></br>
 
-      <div class="products" style={{margin: 'auto', textAlign: "center"}}>
+      <div class="products" style={{margin: 'auto', textAlign: "center", color: "black"}}>
         <h3>Here is a list of our products:</h3>
       </div>
 
@@ -59,7 +59,7 @@ export default async function Page() {
 
     
       {products.map((product) => (
-        <div key={product.id} style={{ width: '500px', margin: 'auto', textAlign: 'center' }}>
+        <div key={product.id} style={{ width: '500px', margin: 'auto', textAlign: 'center', color: "black"}}>
           {product.device} - {product.price} dollars
         </div>
       ))}
@@ -67,32 +67,32 @@ export default async function Page() {
       
       <br></br>
 
-      <div class="workers" style={{margin:"auto", textAlign: "center"}}>
+      <div class="workers" style={{margin:"auto", textAlign: "center", color: "black"}}>
        <h3>The people who made this possible:</h3> 
       </div>
 
       <br></br>
 
       {workers.length > 0 && (
-  <div style={{ margin: 'auto', textAlign: "center"}}>
+  <div style={{ margin: 'auto', textAlign: "center", color: "black"}}>
      {workers[0].firstname} {workers[0].lastname} - Technician working in the {workers[0].department} department
   </div>
 )}
 
 {workers.length > 0 && (
-  <div style={{ margin: 'auto', textAlign: "center"}}>
+  <div style={{ margin: 'auto', textAlign: "center", color: "black"}}>
      {workers[1].firstname} {workers[1].lastname} - Technician working in the {workers[1].department} department
   </div>
 )}
 
 {workers.length > 0 && (
-  <div style={{ margin: 'auto', textAlign: "center"}}>
+  <div style={{ margin: 'auto', textAlign: "center", color: "black"}}>
      {workers[2].firstname} {workers[2].lastname} - Technician working in the {workers[2].department} department
   </div>
 )}
 
 {workers.length > 0 && (
-  <div style={{ margin: 'auto', textAlign: "center", paddingBottom: "50px"}}>
+  <div style={{ margin: 'auto', textAlign: "center", paddingBottom: "50px", color: "black"}}>
      {workers[3].firstname} {workers[3].lastname} - Technician working in the {workers[3].department} department
   </div>
 )}
