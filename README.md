@@ -1,3 +1,21 @@
+# Database Project
+This project is a site developed with Vercel and JavaScript in COMP-305: Software Development at Kalamazoo College.
+
+
+## Purpose
+-> The goal is to draft a full Full-Stack Web Applicaiton later refining it with React. 
+
+## Updates
+As of now, I am in the process of updating the project; below is the update log.
+
+- August 3rd, 2024 -> refactoring code and deleting search bar. First step in planning to add back-end development functionality. 
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
