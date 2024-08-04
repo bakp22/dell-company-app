@@ -2,78 +2,23 @@
 
 "use client";
 
-import { ClientComponent } from "./components/ClientComponent";
 import Image from "next/image";
 import styles from "./page.module.css";
 import { sql } from "@vercel/postgres";
-import React, { useState, useEffect } from "react";
+import React, { } from "react";
 import logo from "./assets/freelancer.svg";
-import { SearchBar } from "./components/SearchBar";
 
 const MyImageComponent = () => {
   return <Image src={logo} alt="Freelancer Logo" />;
 };
 
-export default function Page() {
-  const [initialData, setInitialData] = useState({ products: [], workers: [] });
-  const [filteredData, setFilteredData] = useState({
-    products: [],
-    workers: [],
-  }); // Change #1: Added filteredData state
-  const [searchQuery, setSearchQuery] = useState(""); // State to store the search query
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const { rows: products } = await sql`SELECT * FROM PRODUCTS`;
-        const { rows: workers } = await sql`SELECT * FROM WORKERS`;
-        setInitialData({ products, workers });
-        setFilteredData({ products, workers }); // Change #2: Initialize filteredData with fetched data
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
-
-    fetchData();
-  }, []);
-
-  const handleSearch = (query) => {
-    console.log("Search query:", query); // Log the input value to the console
-    setSearchQuery(query);
-
-    if (!query) {
-      setFilteredData(initialData);
-      return;
-    }
-
-    const lowercasedQuery = query.toLowerCase();
-    const filteredProducts = initialData.products.filter((product) =>
-      product.device.toLowerCase().includes(lowercasedQuery)
-    );
-    const filteredWorkers = initialData.workers.filter(
-      (worker) =>
-        `${worker.firstname} ${worker.lastname}`
-          .toLowerCase()
-          .includes(lowercasedQuery) ||
-        worker.department.toLowerCase().includes(lowercasedQuery)
-    );
-
-    setFilteredData({ products: filteredProducts, workers: filteredWorkers });
-  };
-
-  const { products, workers } = filteredData; // Destructure products and workers from initialData
-
+export default async function Page() {
+  var { rows : products } = await sql`SELECT * from PRODUCTS`;
+  var { rows : workers } = await sql `SELECT * from WORKERS`;
+  
   return (
     <div>
-      <ClientComponent initialData={initialData} />
-      <div className="search-bar-container">
-        <SearchBar onSearch={handleSearch} />
-      </div>
-
-      <div>
-        <p style={{ color: "black" }}>Search Query: {searchQuery}</p>
-      </div>
-
+      
       <div
         className="container"
         style={{
@@ -191,7 +136,6 @@ export default function Page() {
         </div>
       )}
 
-      <ClientComponent />
     </div>
   );
 }
