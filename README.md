@@ -1,17 +1,22 @@
 # Database Project
-This project is a site developed with Vercel and JavaScript in COMP-305: Software Development at Kalamazoo College.
+This project is a site developed with Vercel and JavaScript in COMP-305: Software Development at Kalamazoo College. 
+I am taking the time to modify it after the class had finished.
 
 
 ## Purpose
--> The goal is to draft a full Full-Stack Web Applicaiton later refining it with React. 
+-> The goal is to draft a full Full-Stack Web application and later refine it with React. 
 
 ## Updates
 As of now, I am updating the project; the update log is below.
 
-- August 3rd, 2024 -> refactoring code and deleting search bar. First step in planning to add back-end development functionality. 
+- August 8th, 2024 -> Finalized adding NavBar and resolving changes to clean the UI of the front page.
+     * Fixing the Dropdown menu
+     * working on the backend
 
+- August 3rd, 2024 -> refactoring code and deleting search bar. The first step in planning to add back-end development functionality. 
     * adding Navbar
     * implementing backend
+
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------
 
