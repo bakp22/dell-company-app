@@ -1,16 +1,49 @@
-// src/app/page.js
 
 "use client";
+
 
 import Image from "next/image";
 import styles from "./page.module.css";
 import { sql } from "@vercel/postgres";
 import React, { } from "react";
 import logo from "./assets/freelancer.svg";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Navbar, Nav, NavDropdown, Container } from "react-bootstrap";
 
+
+//Home Image Component of Person Working on Laptop
 const MyImageComponent = () => {
   return <Image src={logo} alt="Freelancer Logo" />;
 };
+
+//Navigation Bar Component
+const NavBarComponent = () => {
+  return (
+    <Navbar expand="lg" className="bg-body-tertiary">
+        <Container>
+            <Navbar.Brand className='brandTitle' href="#home">The Company Dell</Navbar.Brand>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+                <Nav className="me-auto">
+                    <Nav.Link href="#home">Home</Nav.Link>
+                    <Nav.Link href="#about">Team</Nav.Link>
+                    <NavDropdown title="Products" id="basic-nav-dropdown">
+                        <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+                        <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
+                        <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+                        <NavDropdown.Divider />
+                        <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+                    </NavDropdown>
+                </Nav>
+            </Navbar.Collapse>
+        </Container>
+    </Navbar>
+  );
+
+}
+
+
+
 
 export default async function Page() {
   var { rows : products } = await sql`SELECT * from PRODUCTS`;
@@ -18,6 +51,9 @@ export default async function Page() {
   
   return (
     <div>
+      
+      <NavBarComponent/>
+
       
       <div
         className="container"
@@ -32,7 +68,7 @@ export default async function Page() {
           className="title"
           style={{ flex: 1, fontSize: "50px", color: "black" }}
         >
-          <h1>The Company Dell</h1>
+          <h1 className="titleName">The Company Dell</h1>
           <p style={{ color: "black" }}>
             Developers: Beren Akpinar, Narelle Robles, and Pedro Patlan
           </p>

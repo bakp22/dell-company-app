@@ -34,6 +34,9 @@ p {
 }
 
 h1{
-  text-shadow: 25px 25px 5px rgb(246, 217, 246);
+  text-shadow: 10px 10px 3px rgb(246, 217, 246);
 }
 
+.titleName{
+  font-size: 100px;
+}
