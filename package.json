@@ -12,8 +12,10 @@
     "@svgr/webpack": "^8.1.0",
     "@vercel/postgres": "^0.8.0",
     "axios": "^1.6.8",
+    "bootstrap": "^5.3.3",
     "next": "14.2.3",
     "react": "^18",
+    "react-bootstrap": "^2.10.4",
     "react-dom": "^18"
   }
 }
