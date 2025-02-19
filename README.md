@@ -3,6 +3,13 @@ This project is a site developed with Vercel and JavaScript in COMP-305: Softwar
 
 Website: https://dell-company-app.vercel.app/#home 
 
+SQL File:
+<img width="871" alt="Screenshot 2025-02-18 at 9 22 10 PM" src="https://github.com/user-attachments/assets/1225d932-06d2-4c6e-b293-ea82dbe1e992" />
+
+Database:
+<img width="1197" alt="Screenshot 2025-02-18 at 9 23 23 PM" src="https://github.com/user-attachments/assets/30f9de02-e2dd-4bf6-80b1-bded071e2324" />
+<img width="1210" alt="Screenshot 2025-02-18 at 9 23 33 PM" src="https://github.com/user-attachments/assets/4e1e1c0d-44b2-49f6-a82c-7907fb031935" />
+
 ------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
