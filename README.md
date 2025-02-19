@@ -1,5 +1,5 @@
 # Database Project
-This project is a site developed with Vercel and JavaScript in COMP-305: Software Development at Kalamazoo College. Postgres SQL was used to manage our database with the help of TablePlus.
+This project is a site developed with Vercel and JavaScript in COMP-305: Software Development at Kalamazoo College. It introduced me to database management. Postgres SQL was used to manage our database with the help of TablePlus.
 
 Website: https://dell-company-app.vercel.app/#home 
 
